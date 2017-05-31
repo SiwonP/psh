@@ -3,6 +3,7 @@
 #include <limits.h>
 #include <stdlib.h>
 #include "parse.h"
+#include "command.h"
 
 int main(void) {
 	char* cwd=NULL;
@@ -13,14 +14,15 @@ int main(void) {
 		printf("\n");
 	}
 	
-    char cmdLine[PATH_MAX];
-    fgets(cmdLine, sizeof(cmdLine), stdin);
-    printf("%s", cmdLine);
+    char *cmdLine;
+    char **tokens;
+    //fgets(cmdLine, sizeof(cmdLine), stdin);
+    //printf("%s", cmdLine);
+    cmdLine = read_line();
+    tokens = split_line(cmdLine);
     
-    char *arguments[] = { "ls", NULL };
+    char *l = "ls";
+    char *const *args;
+    return execve(l,NULL,NULL);
     
-    if (execv("/bin/ls",arguments)==-1){
-        return EXIT_FAILURE;
-    };
-	return EXIT_SUCCESS;
 }

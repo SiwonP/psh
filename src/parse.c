@@ -15,10 +15,9 @@ char *read_line(void) {
     return cmdLine;
 }
 
-char **split_line(void) {
-    char *str = read_line();
+char **split_line(char *str) {
     char *ch = " ";
-    char *token;
+    char *token = NULL;
     int buffSize = BUFFSIZE;
     char **tokens = malloc(buffSize * sizeof(char*));
     int position = 0;
