@@ -2,6 +2,7 @@
 #include <unistd.h>
 #include <limits.h>
 #include <stdlib.h>
+#include "parse.h"
 
 int main(void) {
 	char* cwd=NULL;
