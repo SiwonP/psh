@@ -17,11 +17,13 @@ int main(void) {
     char *cmdLine;
     char **tokens;
 
+    do{
     cmdLine = read_line();
     tokens = split_line(cmdLine);
     
-    //char *ls = "ls";
-    //char *args[] = {"ls","-a",NULL};
-    execvp(tokens[0], tokens);
+    command(tokens);
+
+    free(tokens);
+    } while (1);
     return EXIT_SUCCESS;
 }

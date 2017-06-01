@@ -26,7 +26,7 @@ char **split_line(char *str) {
 
     while(token != NULL) {
         tokens[position] = token;
-        printf("%s\n", tokens[position]);
+        //printf("%s\n", tokens[position]);
         token = strtok(NULL, ch);
         position++;
     }

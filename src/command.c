@@ -10,6 +10,7 @@ int command(char **args) {
     int status;
 
     pid = fork();
+
     if ( pid == 0 ) {
         execvp(args[0], args);
     } else if ( pid > 0 ) {
