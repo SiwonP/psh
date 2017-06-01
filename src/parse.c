@@ -16,7 +16,7 @@ char *read_line(void) {
 }
 
 char **split_line(char *str) {
-    char *ch = " ";
+    char *ch = " \n";
     char *token = NULL;
     int buffSize = BUFFSIZE;
     char **tokens = malloc(buffSize * sizeof(char*));

@@ -16,13 +16,12 @@ int main(void) {
 	
     char *cmdLine;
     char **tokens;
-    //fgets(cmdLine, sizeof(cmdLine), stdin);
-    //printf("%s", cmdLine);
+
     cmdLine = read_line();
     tokens = split_line(cmdLine);
     
-    char *l = "ls";
-    char *const *args;
-    return execve(l,NULL,NULL);
-    
+    //char *ls = "ls";
+    //char *args[] = {"ls","-a",NULL};
+    execvp(tokens[0], tokens);
+    return EXIT_SUCCESS;
 }
