@@ -3,8 +3,8 @@
 #include <limits.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-#include "parse.h"
-#include "command.h"
+#include "src/parse.h"
+#include "src/command.h"
 
 #define ANSI_COLOR_RED     "\x1b[31m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
