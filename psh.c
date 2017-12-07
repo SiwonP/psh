@@ -27,10 +27,11 @@ int main(void) {
     cwd = getcwd(buff, PATH_MAX+1);
     if (cwd != NULL) {
         if (stat(gitCheck, &gitCheckBuf) == 0) {
-            printf(ANSI_COLOR_GREEN "%s:" ANSI_COLOR_RESET ANSI_COLOR_RED "%s  + git  >> " ANSI_COLOR_RESET, hostName, cwd);
+            printf(ANSI_COLOR_GREEN "%s:" ANSI_COLOR_RESET ANSI_COLOR_RED "%s  + git" ANSI_COLOR_RESET, hostName, cwd);
         } else {
-            printf(ANSI_COLOR_GREEN "%s:" ANSI_COLOR_RESET ANSI_COLOR_RED "%s  >> " ANSI_COLOR_RESET, hostName, cwd);
+            printf(ANSI_COLOR_GREEN "%s:" ANSI_COLOR_RESET ANSI_COLOR_RED "%s" ANSI_COLOR_RESET, hostName, cwd);
         }
+        printf("\n>>");
     }
     cmdLine = read_line();
     tokens = split_line(cmdLine);
