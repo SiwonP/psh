@@ -7,7 +7,8 @@
 
 #define BUFFSIZE 64
 
-char *read_line(void) {
+char *read_line(void)
+{
     char *cmdLine = NULL;
     size_t buffSize = 0;
     int n = 0;
@@ -15,7 +16,8 @@ char *read_line(void) {
     return cmdLine;
 }
 
-char **split_line(char *str) {
+char **split_line(char *str)
+{
     char *ch = " \n";
     char *token = NULL;
     int buffSize = BUFFSIZE;
